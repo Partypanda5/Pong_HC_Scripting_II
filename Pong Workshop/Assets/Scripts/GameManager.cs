@@ -51,13 +51,13 @@ public class GameManager : MonoBehaviour
 
     public void PlayerScores()
     {
-        SetPlayerScore(playerScore++);
+        SetPlayerScore(playerScore + 1);
         StartRound();
     }
 
     public void ComputerScores() 
     {
-        SetComputerScore(computerScore++);
+        SetComputerScore(computerScore + 1);
         StartRound();
     }
 
@@ -65,12 +65,14 @@ public class GameManager : MonoBehaviour
     {
         playerScore = score;
         playerScoreText.text = score.ToString();
+        Debug.Log(playerScore);
     }
 
     public void SetComputerScore(int score)
     {
         computerScore = score;
         computerScoreText.text = score.ToString();
+        Debug.Log(computerScore);
     }
 
 }
